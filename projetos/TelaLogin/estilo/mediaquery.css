@@ -1,0 +1,84 @@
+@charset "UTF-8";
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    body{
+        background-image: linear-gradient(to top, #7925c7, #60c2a1);
+    }
+
+    main{
+        width: 80vw;
+    }
+
+    div#foto{
+        float: left;
+        width: 30%;
+        height: 100%;
+    }
+
+    section{
+        float: right;
+        width: 70%;
+    }
+
+    section h1{
+        padding: 20px;
+        font-size: 2em;
+    }
+
+    section p{
+        padding: 20px;
+    }
+
+    div.pr{
+        display: block;
+        padding: 20px;
+        width: 70%;
+        margin-top: 20px;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.37);
+    }
+
+    #entrar, #esquecisenha{
+        margin: auto;
+        margin-top: 20px;
+    }
+}
+
+@media screen and (min-width: 998px){
+    main{
+        width: 950px;
+    }
+
+    div#foto{
+        float: right;
+        width: 50%;
+        height: 100%;
+    }
+
+    section{
+        float: left;
+        width: 50%;
+        height: 100%;
+    }
+
+    section h1{
+        padding: 20px;
+        font-size: 2em;
+    }
+
+    section p{
+        padding: 30px;
+    }
+
+    div.pr{
+        display: block;
+        padding: 20px;
+        width: 70%;
+        margin-top: 25px;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.37);
+    }
+
+    #entrar, #esquecisenha{
+        margin: auto;
+        margin-top: 45px;
+    }
+}
