@@ -1,42 +1,267 @@
-body {
-  font-family: 'Poppins', sans-serif;
-  background: #0f0f0f;
-  color: #fff;
+/* ==============================
+   TEMA DRACULA
+============================== */
+:root {
+  --bg-main: #282a36;
+  --bg-second: #44475a;
+
+  --text-main: #f8f8f2;
+  --text-accent: #50fa7b;
+  --text-sub: #bd93f9;
+
+  --btn-bg: #6272a4;
+  --btn-hover: #50fa7b;
+  --btn-text: #f8f8f2;
+
+  --accent: #ff79c6;
+  --highlight: #f1fa8c;
+  --cyan: #8be9fd;
+
+  --font-main: "Poppins", sans-serif;
+}
+
+/* ==============================
+   RESET
+============================== */
+* {
   margin: 0;
   padding: 0;
-  text-align: center;
+  box-sizing: border-box;
+  font-family: var(--font-main);
 }
 
+body {
+  background: var(--bg-main);
+  color: var(--text-main);
+  line-height: 1.6;
+}
+
+/* ==============================
+   NAVBAR
+============================== */
 header {
-  padding: 3rem 1rem;
-  background: linear-gradient(90deg, #a18cd1, #fbc2eb);
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  padding: 2rem;
-}
-
-.projeto {
-  background: #1e1e1e;
-  border-radius: 12px;
-  padding: 1rem;
-  box-shadow: 0 0 10px #000;
-}
-
-.projeto img {
   width: 100%;
-  border-radius: 8px;
+  padding: 25px 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-a {
-  color: #a18cd1;
-  text-decoration: none;
+.navbar .logo {
+  font-size: 1.7rem;
   font-weight: bold;
+  color: var(--accent);
 }
 
-img {
-    max-width: 500px;
+.navbar .menu {
+  display: flex;
+  gap: 22px;
+  list-style: none;
+}
+
+.navbar a {
+  color: var(--text-main);
+  text-decoration: none;
+  font-weight: 500;
+  transition: .3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  color: var(--text-accent);
+}
+
+/* ==============================
+   HERO SECTION
+============================== */
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 10%;
+  gap: 40px;
+}
+
+.text-box {
+  max-width: 550px;
+}
+
+.tag {
+  background: var(--bg-second);
+  padding: 6px 15px;
+  border-radius: 8px;
+  display: inline-block;
+  font-size: .85rem;
+  color: var(--cyan);
+  margin-bottom: 18px;
+}
+
+h1 {
+  font-size: 2.8rem;
+  margin-bottom: 12px;
+}
+
+.name {
+  color: var(--accent);
+}
+
+h2 {
+  color: var(--text-sub);
+  margin-bottom: 18px;
+}
+
+.info {
+  margin: 18px 0;
+  color: var(--highlight);
+  display: flex;
+  gap: 18px;
+  font-size: .9rem;
+}
+
+.buttons {
+  display: flex;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 22px;
+  border-radius: 8px;
+  background: var(--btn-bg);
+  color: var(--btn-text);
+  font-weight: 600;
+  text-decoration: none;
+  transition: .25s;
+}
+
+.btn.primary {
+  background: var(--accent);
+  color: #fff;
+}
+
+.btn:hover {
+  background: var(--btn-hover);
+  color: #000;
+}
+
+/* Social icons */
+.socials {
+  margin-top: 10px;
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.socials span {
+  font-size: .9rem;
+  opacity: .8;
+}
+
+.socials a {
+  font-size: 1.3rem;
+  color: var(--cyan);
+  transition: .2s;
+}
+
+.socials a:hover {
+  color: var(--accent);
+}
+
+/* Image */
+.image-box img {
+  width: 330px;
+  border-radius: 12px;
+  filter: drop-shadow(0 0 10px var(--accent));
+}
+
+/* ==============================
+   TELA DE BOAS VINDAS
+============================== */
+#msg1 {
+  padding-left: 68px;
+  padding-bottom: 20px;
+}
+
+#msg2 {
+  padding-bottom: 20px;
+}
+
+#msg3 {
+  padding-left: 3px;
+  padding-right: 30px;
+}
+
+#msg4 {
+  padding-right: 30px;
+}
+
+#msg6 {
+  padding-top: 20px;
+  color: var(--color-primary-light);
+  padding-left: 5px;
+  font-style: italic;
+}
+
+#welcome-screen {
+  position: fixed;
+  inset: 0;
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  opacity: 1;
+  transition: opacity 1s ease;
+}
+
+#welcome-screen .message {
+  color: var(--text-accent);
+  font-size: 2rem;
+  font-weight: 600;
+  opacity: 0;
+  animation: fall .8s ease forwards;
+}
+
+@keyframes fall {
+  from {
+    opacity: 0;
+    transform: translateY(-200px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#welcome-screen .message:nth-child(1) {
+  animation-delay: .2s;
+}
+
+#welcome-screen .message:nth-child(2) {
+  animation-delay: .4s;
+}
+
+#welcome-screen .message:nth-child(3) {
+  animation-delay: .6s;
+}
+
+#welcome-screen .message:nth-child(4) {
+  animation-delay: .8s;
+}
+
+/* ==============================
+   RESPONSIVO
+============================== */
+@media(max-width: 900px) {
+  .home {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .image-box img {
+    width: 250px;
+  }
 }

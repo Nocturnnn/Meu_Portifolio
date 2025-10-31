@@ -1,55 +1,84 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <title>Portfólio | Mateus</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-  <header>
-    <h1>👋 Olá, sou Mateus Vitor</h1>
-    <p>Desenvolvedor Web/FullStack — crio sites modernos e responsivos</p>
-  </header>
+  <!-- Adicione isso logo dentro do <body> -->
+  <div id="welcome-screen">
+    <div class="icons">
+      <i class="fa-solid fa-laptop-code message" id="msg1"></i>
+      <h2 id="msg2" class="message">MEU PERFIL</h2>
 
-  <section id="projetos">
-    <h2>🖥️ Meus Projetos</h2>
-    <div class="grid">
-      <div class="projeto">
-        <img src="imagens/pexels-beyzahzah-89810429-15319043.jpg" alt="Site 1" />
-        <h3>IMC</h3>
-        <a href="projetos/ExIMC/modelo/index.html" target="_blank">Ver site</a>
-      </div>
+      <i class="fa-brands fa-github message" id="msg3"></i>
+      <i class="fa-solid fa-code message" id="msg4"></i>
+      <i class="fa-solid fa-user message" id="msg5"></i>
 
-      <div class="projeto">
-        <img src="imagens/pexels-cileklipalet-34344546.jpg" alt="Site 2" />
-        <h3>Cordel Milton Duarte</h3>
-        <a href="projetos/Cordel Milton Duarte/cordel.html" target="_blank">Ver site</a>
-      </div>
-
-      <div class="projeto">
-        <img src="imagens/pexels-tracy-le-blanc-67789-607812.jpg" alt="Site 3" />
-        <h3>Mídia Social</h3>
-        <a href="projetos/Social/index.html" target="_blank">Ver site</a>
-      </div>
-
-      <div class="projeto">
-        <img src="https://t2.tudocdn.net/683028?w=646&h=284" alt="Site 4" />
-        <h3>android</h3>
-        <a href="projetos/SiteAndroid/android.html" target="_blank">Ver site</a>
-      </div>
-
-      <div class="projeto">
-        <img src="imagens/pexels-pixabay-210528.jpg" alt="Site 5" />
-        <h3>Timer (JS)</h3>
-        <a href="projetos/ExTimer/modelo/index.html" target="_blank">Ver site</a>
-      </div>
+      <p id="msg6">by Mateus</p>
     </div>
-  </section>
+  </div>
 
-  <footer>
-    <p>📞 Contato: <a href="https://wa.me/62995006895">WhatsApp</a> | 
-       <a href="https://github.com/nocturnnn">GitHub</a></p>
-  </footer>
+
+  </div>
+  <header>
+    <nav class="navbar">
+        <div class="logo">Portfolio.</div>
+        <ul class="menu">
+            <li><a href="#" class="active"><i class="fa-solid fa-house"></i> Home</a></li>
+            <li><a href="#"><i class="fa-regular fa-user"></i> About</a></li>
+            <li><a href="#"><i class="fa-solid fa-briefcase"></i> Projects</a></li>
+            <li><a href="#"><i class="fa-solid fa-code"></i> Services</a></li>
+            <li><a href="#"><i class="fa-regular fa-envelope"></i> Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="home">
+    <div class="text-box">
+        
+        <span class="tag">Available for freelance work</span>
+
+        <h1>Hi, I'm <span class="name">Amine</span></h1>
+        <h2>UI/UX Designer | Web Developer</h2>
+
+        <p>
+            I create beautiful, functional, and user-centered digital experiences.  
+            With 2+ years of experience in web development, I bring ideas to life 
+            through clean code and thoughtful design.
+        </p>
+
+        <div class="info">
+            <p><i class="fa-solid fa-location-dot"></i> Based in Algeria</p>
+            <p><i class="fa-solid fa-check-circle"></i> Available Now</p>
+        </div>
+
+        <div class="buttons">
+            <a href="#" class="btn primary">Hire Me</a>
+            <a href="#" class="btn">Download CV</a>
+        </div>
+
+        <div class="socials">
+            <span>Follow me:</span>
+            <a href="#"><i class="fa-brands fa-github"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-behance"></i></a>
+        </div>
+    </div>
+
+    <div class="image-box">
+        <!-- troque para sua imagem -->
+        <img src="imagens/pexels-luis-gomes-166706-546819.jpg" alt="profile">
+    </div>
+</section>
+  <script src="script.js"></script>
 </body>
+
 </html>
